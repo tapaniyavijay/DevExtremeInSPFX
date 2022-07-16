@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "dev-extreme-in-spfx-client-side-solution",
+    "id": "5da2d921-8744-4fd4-8b08-c2a8de10455c",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.15.0-rc.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "dev-extreme-in-spfx description"
+      },
+      "longDescription": {
+        "default": "dev-extreme-in-spfx description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "dev-extreme-in-spfx Feature",
+        "description": "The feature that activates elements of the dev-extreme-in-spfx solution.",
+        "id": "f10b17b3-e112-44e6-8ff8-33a66594b30b",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/dev-extreme-in-spfx.sppkg"
+  }
+}

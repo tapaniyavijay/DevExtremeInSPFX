@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "dev-extreme-grid-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/devExtremeGrid/DevExtremeGridWebPart.js",
+          "manifest": "./src/webparts/devExtremeGrid/DevExtremeGridWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "DevExtremeGridWebPartStrings": "lib/webparts/devExtremeGrid/loc/{locale}.js"
+  }
+}
