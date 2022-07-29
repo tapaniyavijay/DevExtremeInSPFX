@@ -8,24 +8,28 @@ import {
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
-import * as strings from 'DevExtremeGridWebPartStrings';
-import DevExtremeGrid from './components/DevExtremeGrid';
-import { IDevExtremeGridProps } from './components/IDevExtremeGridProps';
+import * as strings from 'VoiceRecordingWebPartStrings';
+import VoiceRecording from './components/VoiceRecording';
+import { IVoiceRecordingProps } from './components/IVoiceRecordingProps';
 
+export interface IVoiceRecordingWebPartProps {
+  description: string;
+}
 
-
-export default class DevExtremeGridWebPart extends BaseClientSideWebPart<IDevExtremeGridProps> {
+export default class VoiceRecordingWebPart extends BaseClientSideWebPart<IVoiceRecordingWebPartProps> {
 
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
 
   public render(): void {
-    const element: React.ReactElement<IDevExtremeGridProps> = React.createElement(
-      DevExtremeGrid,
+    const element: React.ReactElement<IVoiceRecordingProps> = React.createElement(
+      VoiceRecording,
       {
-        listName: this.properties.listName,
-        listInternalName : this.properties.listInternalName,
-        context: this.context
+        description: this.properties.description,
+        isDarkTheme: this._isDarkTheme,
+        environmentMessage: this._environmentMessage,
+        hasTeamsContext: !!this.context.sdks.microsoftTeams,
+        userDisplayName: this.context.pageContext.user.displayName
       }
     );
 
@@ -83,15 +87,10 @@ export default class DevExtremeGridWebPart extends BaseClientSideWebPart<IDevExt
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('listName', {
-                  label: "Library Display Name",
-                  description:"Please enter display name of the library"
-                }),
-                PropertyPaneTextField('listInternalName', {
-                  label: "Library Internal Name",
-                  description:"Please enter internal name of the library"
-                }),
-              ],
+                PropertyPaneTextField('description', {
+                  label: strings.DescriptionFieldLabel
+                })
+              ]
             }
           ]
         }

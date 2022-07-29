@@ -9,10 +9,28 @@
           "manifest": "./src/webparts/devExtremeGrid/DevExtremeGridWebPart.manifest.json"
         }
       ]
+    },
+    "voice-recording-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/voiceRecording/VoiceRecordingWebPart.js",
+          "manifest": "./src/webparts/voiceRecording/VoiceRecordingWebPart.manifest.json"
+        }
+      ]
+    },
+    "voice-recording-tiny-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/voiceRecordingTiny/VoiceRecordingTinyWebPart.js",
+          "manifest": "./src/webparts/voiceRecordingTiny/VoiceRecordingTinyWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "DevExtremeGridWebPartStrings": "lib/webparts/devExtremeGrid/loc/{locale}.js"
+    "DevExtremeGridWebPartStrings": "lib/webparts/devExtremeGrid/loc/{locale}.js",
+    "VoiceRecordingWebPartStrings": "lib/webparts/voiceRecording/loc/{locale}.js",
+    "VoiceRecordingTinyWebPartStrings": "lib/webparts/voiceRecordingTiny/loc/{locale}.js"
   }
 }

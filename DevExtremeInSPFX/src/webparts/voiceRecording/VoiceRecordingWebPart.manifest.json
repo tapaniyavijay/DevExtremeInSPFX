@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "2b5a39f9-3374-4344-af91-5b951ccdc30b",
-  "alias": "DevExtremeGridWebPart",
+  "id": "5fff80de-085b-44b8-a254-12ffb83d2ae3",
+  "alias": "VoiceRecordingWebPart",
   "componentType": "WebPart",
 
   // The "*" signifies that the version should be taken from the package.json
@@ -18,12 +18,11 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
     "group": { "default": "Other" },
-    "title": { "default": "DevExtremeGrid" },
-    "description": { "default": "DevExtremeGrid description" },
+    "title": { "default": "VoiceRecording" },
+    "description": { "default": "VoiceRecording description" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "listName": "Documents",
-      "listInternalName":"Shared Documents"
+      "description": "VoiceRecording"
     }
   }]
 }
