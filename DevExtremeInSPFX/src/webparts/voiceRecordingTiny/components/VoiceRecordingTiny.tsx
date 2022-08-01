@@ -47,7 +47,9 @@ export const MyRecorder: React.FunctionComponent<IComponentProps> = (props: Reac
           ))}
         </div>
         <div>
-          <PrimaryButton
+          <PrimaryButton text='Start' onClick={start}></PrimaryButton>
+          <PrimaryButton text='Stop' onClick={stop}></PrimaryButton>
+          {/* <PrimaryButton
             text="Press and hold to record"
             iconProps={{ iconName: "Record2" }}
             style={{ marginRight: 5 }}
@@ -57,9 +59,7 @@ export const MyRecorder: React.FunctionComponent<IComponentProps> = (props: Reac
             onMouseUp={stop}
             onTouchStart={start}
             onTouchEnd={stop}>
-            {/* <img style={{ height: 50 }} src='https://www.vhv.rs/dpng/d/545-5459580_logo-record-icon-png-transparent-png.png' /> */}
-            {/* <Icon iconName='Record2'></Icon> */}
-          </PrimaryButton>
+          </PrimaryButton> */}
           <DefaultButton
             text="Reset"
             style={{ marginRight: 5 }}
@@ -91,7 +91,7 @@ export const MyRecorder: React.FunctionComponent<IComponentProps> = (props: Reac
             {/* <img style={{ height: 50 }} src='https://cdn-icons-png.flaticon.com/512/338/338864.png' /> */}
             {/* <Icon iconName='CloudUpload'></Icon> */}
           </DefaultButton>
-          <h3 className={'onair'}>On air: {isRecording ? 'on' : 'off'}</h3>
+          <h3 className={['onair', isRecording ? styles.blink : ''].join(' ')}>Recording: {isRecording ? 'on' : 'off'}</h3>
         </div>
       </div>
     </div>
